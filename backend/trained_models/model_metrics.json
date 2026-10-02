@@ -1,0 +1,23 @@
+{
+  "crop_recommendation": {
+    "model_type": "RandomForestClassifier",
+    "test_accuracy": 0.9306,
+    "n_classes": 12,
+    "features": [
+      "N",
+      "P",
+      "K",
+      "temperature",
+      "humidity",
+      "ph",
+      "rainfall"
+    ]
+  },
+  "yield_prediction": {
+    "model_type": "GradientBoostingRegressor",
+    "mae": 3.2545,
+    "rmse": 6.694,
+    "r2_score": 0.9946,
+    "target": "yield_per_acre (Quintals)"
+  }
+}

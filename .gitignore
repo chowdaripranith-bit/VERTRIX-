@@ -1,0 +1,43 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+backend/venv/
+venv/
+ENV/
+env/
+.pytest_cache/
+
+# Node
+node_modules/
+frontend/node_modules/
+frontend/dist/
+dist/
+.npm
+npm-debug.log*
+
+# Database & Environment
+*.sqlite
+*.sqlite3
+*.db
+!datasets/*.db
+.env
+.env.local
+.env.*.local
+
+# IDE & OS
+.idea/
+.vscode/
+.agents/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Large binaries
+cloudflared.exe
+
+# Gemini / Antigravity
+.gemini/

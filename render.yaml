@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: veltrix-agri-optimizer
+    env: docker
+    dockerfilePath: Dockerfile
+    plan: free
+    region: oregon
+    healthCheckPath: /api/health
+    envVars:
+      - key: PORT
+        value: 8000
+      - key: PYTHONUNBUFFERED
+        value: "1"
+      # LLM API Keys — set these in Render Dashboard for security
+      # The AI assistant works without these (uses built-in fallback engine)
+      # but cloud LLM provides much richer responses
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: GROQ_API_KEY
+        sync: false
+      - key: LLM_MODEL
+        value: gemini-2.0-flash
